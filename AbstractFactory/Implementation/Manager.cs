@@ -6,20 +6,13 @@ using System.Text;
 namespace AbstractFactory
 {
     public class Manager : AbstractEmployer
-    {
-        private string _ManagerialStatus;
+    {    
 
-        public string ManagerialStatus
+        public string ManagerialStatus {get; set; }
+        public override string FullNAme()
         {
-            get
-            {
-                return _ManagerialStatus;
-            }
-
-            set
-            {
-                _ManagerialStatus = value;
-            }
+            return string.Concat(this.ManagerialStatus, " ", this.FirstName, " ", this.LastName);
         }
+
     }
 }

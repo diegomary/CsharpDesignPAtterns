@@ -7,18 +7,12 @@ namespace AbstractFactory
 {
     public class BuisineesAnalyst : AbstractEmployer
     {
-        private string _BusineessTitle;
 
-        public string BusineessTitle
+        public string BusineessTitle { get; set; }
+        public override string FullNAme()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
+            return string.Concat(this.BusineessTitle, " ", this.FirstName, " ", this.LastName);
         }
+      
     }
 }

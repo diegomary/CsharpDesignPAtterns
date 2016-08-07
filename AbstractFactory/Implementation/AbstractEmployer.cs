@@ -7,47 +7,11 @@ namespace AbstractFactory
 {
     public abstract class AbstractEmployer
     {
-        private int _id;
-        private string _name;
-        private string _email;
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public abstract string FullNAme();
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-
-            set
-            {
-                _name = value;
-            }
-        }
-
-        public int Id
-        {
-            get
-            {
-                return _id;
-            }
-
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public string Email
-        {
-            get
-            {
-                return Email;
-            }
-
-            set
-            {
-                _email = value;
-            }
-        }
     }
 }

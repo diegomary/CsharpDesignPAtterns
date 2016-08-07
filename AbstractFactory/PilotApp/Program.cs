@@ -11,17 +11,8 @@ namespace PilotApp
     {
         static void Main(string[] args)
         {
-
-            EmployerFactory ep = new EmployerFactory();
-            Manager mg = (Manager)ep.CreateEmployer(EmployerType.Manager);
-
-            mg.ManagerialStatus = "CTO";
-
-            var f = mg.ManagerialStatus;
-
-
-            var t = 0;
-          
+            EmployerFactory ep = new EmployerFactory();          
+            AbstractEmployer ae = ep.CreateEmployer(EmployerType.Manager);
 
         }
     }

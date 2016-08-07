@@ -7,19 +7,11 @@ namespace AbstractFactory
 {
     public class Developer : AbstractEmployer
     {
-        private string _ItDeportmentCode;
-
-        public string ItDeportmentCode
+        public string ItDeportmentCode { get; set; }
+        public override string FullNAme()
         {
-            get
-            {
-                return _ItDeportmentCode;
-            }
-
-            set
-            {
-                _ItDeportmentCode = value;
-            }
-        }
+            return string.Concat(this.ItDeportmentCode, " ", this.FirstName, " ", this.LastName);
+        }      
+       
     }
 }
