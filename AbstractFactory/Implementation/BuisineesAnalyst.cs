@@ -5,14 +5,18 @@ using System.Text;
 
 namespace AbstractFactory
 {
-    public class BuisineesAnalyst : AbstractEmployer
+    public class BuisineesAnalyst : IEmployer
     {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
 
         public string BusineessTitle { get; set; }
-        public override string FullName()
+        public string FullName()
         {
             return string.Concat(this.BusineessTitle, " ", this.FirstName, " ", this.LastName);
         }
-      
+
     }
 }

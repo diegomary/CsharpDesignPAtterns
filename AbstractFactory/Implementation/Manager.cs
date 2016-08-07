@@ -5,11 +5,15 @@ using System.Text;
 
 namespace AbstractFactory
 {
-    public class Manager : AbstractEmployer
-    {    
+    public class Manager : IEmployer
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
 
-        public string ManagerialStatus {get; set; }
-        public override string FullName()
+        public string ManagerialStatus { get; set; }
+        public string FullName()
         {
             return string.Concat(this.ManagerialStatus, " ", this.FirstName, " ", this.LastName);
         }

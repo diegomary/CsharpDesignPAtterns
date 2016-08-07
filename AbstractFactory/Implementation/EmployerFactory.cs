@@ -7,7 +7,7 @@ namespace AbstractFactory
 {
     public class EmployerFactory
     {
-        public AbstractEmployer CreateEmployer(EmployerType et)
+        public IEmployer CreateEmployer(EmployerType et)
         {
            
             switch (et)
