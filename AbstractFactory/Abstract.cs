@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
+    //First step
     public class Abstract
     {
     }
