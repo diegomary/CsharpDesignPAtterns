@@ -12,7 +12,13 @@ namespace PilotApp
         static void Main(string[] args)
         {
             EmployerFactory ep = new EmployerFactory();          
-            AbstractEmployer ae = ep.CreateEmployer(EmployerType.Manager);
+            Manager ae = (Manager) ep.CreateEmployer(EmployerType.Manager);
+            ae.FirstName = "Diego";
+            ae.LastName = "Burrlando";
+            ae.ManagerialStatus = "CTO";
+
+            string ret = ae.FullName();
+
 
         }
     }

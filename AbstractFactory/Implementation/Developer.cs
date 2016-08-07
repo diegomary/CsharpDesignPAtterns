@@ -8,7 +8,7 @@ namespace AbstractFactory
     public class Developer : AbstractEmployer
     {
         public string ItDeportmentCode { get; set; }
-        public override string FullNAme()
+        public override string FullName()
         {
             return string.Concat(this.ItDeportmentCode, " ", this.FirstName, " ", this.LastName);
         }      

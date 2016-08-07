@@ -9,7 +9,7 @@ namespace AbstractFactory
     {    
 
         public string ManagerialStatus {get; set; }
-        public override string FullNAme()
+        public override string FullName()
         {
             return string.Concat(this.ManagerialStatus, " ", this.FirstName, " ", this.LastName);
         }
