@@ -28,5 +28,19 @@
       <FileName>BuisineesAnalyst.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AbstractFactory.EmployerFactory">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmployerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AbstractFactory.EmployerType">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAACAAAAAA=</HashCode>
+      <FileName>EmployerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
