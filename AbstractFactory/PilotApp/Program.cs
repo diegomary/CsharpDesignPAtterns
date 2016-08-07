@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractFactory
+namespace PilotApp
 {
-    //First step
-    public class Abstract
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
