@@ -10,20 +10,22 @@ namespace SingletonDp
     {
         private static readonly SingletonStaticInitialization instance = new SingletonStaticInitialization();
         private int[] responseTime;
+        private static Random rnd = new Random();
         public static List<int> allResponseTimes;
         private SingletonStaticInitialization()
         {
             responseTime = new int[10];
             allResponseTimes = new List<int>();
-            Random rnd = new Random();           
+                  
         }
 
         public void CalculateLatency()
         {
-            Random rnd = new Random();
+         
             for (int j = 0; j < responseTime.Length; j++)
             {
                 responseTime[j] = rnd.Next(1, 71); // response time between 1ms and 70 ms
+               
             }
             allResponseTimes.AddRange(responseTime);
 
