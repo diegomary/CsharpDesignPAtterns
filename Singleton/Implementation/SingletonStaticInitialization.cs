@@ -9,26 +9,25 @@ namespace SingletonDp
     public sealed class SingletonStaticInitialization
     {
         private static readonly SingletonStaticInitialization instance = new SingletonStaticInitialization();
-        private int[] responseTime;
+        private object locker;
         private static Random rnd = new Random();
-        public static List<int> allResponseTimes;
+        public static List<ResponseTimeSample> allResponseTimes;
         private SingletonStaticInitialization()
         {
-            responseTime = new int[10];
-            allResponseTimes = new List<int>();
+            locker = new object();
+            allResponseTimes = new List<ResponseTimeSample>();
                   
         }
 
         public void CalculateLatency()
-        {
-         
-            for (int j = 0; j < responseTime.Length; j++)
-            {
-                responseTime[j] = rnd.Next(1, 71); // response time between 1ms and 70 ms
-               
-            }
-            allResponseTimes.AddRange(responseTime);
-
+        {           
+                int[] responseTime = new int[10]; 
+                for (int j = 0; j < responseTime.Length; j++)
+                {
+                    responseTime[j] = rnd.Next(1, 71); // response time between 1ms and 70 ms this is the place where the latency can be calculated
+                }
+                ResponseTimeSample rst = new ResponseTimeSample() { Sample = responseTime };
+                lock (locker) {allResponseTimes.Add(rst);} // The global resource must be protected by cuncurrency
         }
 
         public static SingletonStaticInitialization Instance

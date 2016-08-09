@@ -25,7 +25,7 @@ namespace PilotApp
 
             }
 
-            System.Threading.Thread.Sleep(3000);          
+            System.Threading.Thread.Sleep(4000);          
 
             var all = SingletonStaticInitialization.allResponseTimes;
 
