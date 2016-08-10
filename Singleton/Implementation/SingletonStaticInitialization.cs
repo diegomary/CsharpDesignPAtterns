@@ -6,9 +6,9 @@ namespace SingletonDp
     using System;
     using System.Collections.Generic;
 
-    public sealed class SingletonStaticInitialization
+    public sealed class SingletonStaticInitialization : ISingletonStaticInitialization
     {
-        private static readonly SingletonStaticInitialization instance = new SingletonStaticInitialization();
+        private static readonly ISingletonStaticInitialization instance = new SingletonStaticInitialization();
         private object locker;
         private static Random rnd = new Random();
         public static List<ResponseTimeSample> allResponseTimes;
@@ -26,7 +26,7 @@ namespace SingletonDp
                 {
                     responseTime[j] = rnd.Next(1, 71); // response time between 1ms and 70 ms this is the place where the latency can be calculated
                 }
-                ResponseTimeSample rst = new ResponseTimeSample() { Sample = responseTime };
+                ResponseTimeSample rst =                                                                         new ResponseTimeSample() { Sample = responseTime };
                 lock (locker) {allResponseTimes.Add(rst);} // The global resource must be protected by cuncurrency
         }
 
@@ -34,7 +34,7 @@ namespace SingletonDp
         {
             get
             {
-                return instance;
+                return (SingletonStaticInitialization)instance;
             }
         }
     }
