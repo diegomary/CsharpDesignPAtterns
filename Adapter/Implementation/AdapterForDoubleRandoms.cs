@@ -4,14 +4,19 @@
 namespace AdapterDP
 {
     // The adaptee class
+    // This class produces Integers random numbers in 
     public class RandomGenerator
     {
-        protected  const int amount = 1000;
+       
+        public int LowerLimit { get; set; }
+        public int HigherLimit { get; set; }
+        public int Amount { get; set; }
+
         public int[] Calculate()
         {
             Random rnd = new Random();
-            int[] nm = new int[amount];
-            for (int i = 0; i < amount; i++) nm[i] = rnd.Next(0, amount + 1);
+            int[] nm = new int[Amount];
+            for (int i = 0; i < Amount; i++) nm[i] = rnd.Next(LowerLimit, HigherLimit + 1);
             return nm;
         }
 
@@ -30,7 +35,7 @@ namespace AdapterDP
         {
             Random rnd = new Random();
             int[] integersRandom = Calculate();
-            double[] doubleRandoms = new double[amount];
+            double[] doubleRandoms = new double[Amount];
             for(int y= 0; y < integersRandom.Length;y++)
             {
                 doubleRandoms[y] = integersRandom[y] + rnd.NextDouble();
