@@ -39,18 +39,10 @@ namespace AdapterDP
             for(int y= 0; y < integersRandom.Length;y++)
             {
                 doubleRandoms[y] = integersRandom[y] + rnd.NextDouble();
-
             }
             return doubleRandoms;
-
         }
     }
-
-
-
-
-
-
 
 
 }
