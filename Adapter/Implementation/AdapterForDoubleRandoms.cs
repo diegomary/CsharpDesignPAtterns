@@ -7,7 +7,7 @@ namespace AdapterDP
     // This class produces Integers random numbers in 
     public class RandomGenerator
     {
-       
+       // This is a simple modification
         public int LowerLimit { get; set; }
         public int HigherLimit { get; set; }
         public int Amount { get; set; }
